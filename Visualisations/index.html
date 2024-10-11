@@ -8,27 +8,138 @@
         body {
             font-family: Arial, sans-serif;
         }
-        nav {
+        h1, p {
+            text-align: center;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
             margin-bottom: 20px;
         }
-        nav a {
-            margin-right: 15px;
+        .container a {
+            display: block;
+            padding: 10px;
+            background-color: #f4f4f4;
+            text-align: center;
             text-decoration: none;
             color: #000;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease;
         }
-        nav a:hover {
-            text-decoration: underline;
+        .container a:hover {
+            background-color: #ddd;
+        }
+        .iframes-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            min-height: 800px;
+            border: 1px solid #ddd;
+        }
+        /* Individual iframe container styles */
+        #first-iframes {
+            grid-template-columns: repeat(2, 1fr);
+            height: 100%;
+        }
+        #datasets-165 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        #datasets-690 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        #transcription-factors {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        #sota {
+            grid-template-columns: repeat(2, 1fr);
         }
     </style>
 </head>
 <body>
     <h1>Welcome to GCBLANE Webpage</h1>
     <p>Here are the navigation links to other pages.</p>
-    <nav>
-        <a href="ROC.html">ROC Curve</a>
-        <a href="PR.html">PR Curve</a>
-        <a href="Confusion Matrix.html">Confusion Matrix</a>
-        <a href="Classification.html">Classification Metrics</a>
-    </nav>
+
+    <!-- First Set of Iframes -->
+    <h2>Metrics Navigation</h2>
+    <div class="container" id="first-iframes-nav">
+        <a href="ROC.html" target="iframe1">ROC Curve</a>
+        <a href="PR.html" target="iframe2">PR Curve</a>
+        <a href="Confusion Matrix.html" target="iframe3">Confusion Matrix</a>
+        <a href="Classification.html" target="iframe4">Classification Metrics</a>
+    </div>
+    <div class="iframes-container" id="first-iframes">
+        <iframe name="iframe1" src="ROC.html"></iframe>
+        <iframe name="iframe2" src="PR.html"></iframe>
+        <iframe name="iframe3" src="Confusion Matrix.html"></iframe>
+        <iframe name="iframe4" src="Classification.html"></iframe>
+    </div>
+
+    <!-- 165 Datasets Iframes -->
+    <h2>165 Datasets Navigation</h2>
+    <div class="container" id="165-datasets-nav">
+        <a href="165 Datasets/165_box_plot.html" target="box-plot-165">Box Plot</a>
+        <a href="165 Datasets/165_violin_plot.html" target="violin-plot-165">Violin Plot</a>
+    </div>
+    <div class="iframes-container" id="datasets-165">
+        <iframe name="box-plot-165" src="165 Datasets/165_box_plot.html"></iframe>
+        <iframe name="violin-plot-165" src="165 Datasets/165_violin_plot.html"></iframe>
+    </div>
+
+    <!-- 690 Datasets Iframes -->
+    <h2>690 Datasets Navigation</h2>
+    <div class="container" id="690-datasets-nav">
+        <a href="690 Datasets/690_box_plot.html" target="box-plot-690">Box Plot</a>
+        <a href="690 Datasets/690_violin_plot.html" target="violin-plot-690">Violin Plot</a>
+    </div>
+    <div class="iframes-container" id="datasets-690">
+        <iframe name="box-plot-690" src="690 Datasets/690_box_plot.html"></iframe>
+        <iframe name="violin-plot-690" src="690 Datasets/690_violin_plot.html"></iframe>
+    </div>
+
+    <!-- Transcription Factors Iframes -->
+    <h2>Transcription Factors and Cell Lines Navigation</h2>
+    <div class="container" id="transcription-factors-nav">
+        <a href="165 Datasets/Transcription Factors/acc_tf_heatmap.html" target="acc-tf-heatmap">Accuracy Heatmap</a>
+        <a href="165 Datasets/Transcription Factors/roc_auc_tf_heatmap.html" target="roc-auc-tf-heatmap">ROC AUC Heatmap</a>
+        <a href="165 Datasets/Transcription Factors/pr_auc_tf_heatmap.html" target="pr-auc-tf-heatmap">PR AUC Heatmap</a>
+        <br>
+        <a href="165 Datasets/Cell Lines/acc_cell_line_heatmap.html" target="acc-cell-line-heatmap">Accuracy Heatmap</a>
+        <a href="165 Datasets/Cell Lines/roc_auc_cell_line_heatmap.html" target="roc-auc-cell-line-heatmap">ROC AUC Heatmap</a>
+        <a href="165 Datasets/Cell Lines/pr_auc_cell_line_heatmap.html" target="pr-auc-cell-line-heatmap">PR AUC Heatmap</a>
+    </div>
+    <div class="iframes-container" id="transcription-factors">
+        <iframe name="acc-tf-heatmap" src="165 Datasets/Transcription Factors/acc_tf_heatmap.html"></iframe>
+        <iframe name="acc-cell-line-heatmap" src="165 Datasets/Cell Lines/acc_cell_line_heatmap.html"></iframe>
+        <iframe name="roc-auc-tf-heatmap" src="165 Datasets/Transcription Factors/roc_auc_tf_heatmap.html"></iframe>
+        <iframe name="roc-auc-cell-line-heatmap" src="165 Datasets/Cell Lines/roc_auc_cell_line_heatmap.html"></iframe>
+        <iframe name="pr-auc-cell-line-heatmap" src="165 Datasets/Cell Lines/pr_auc_cell_line_heatmap.html"></iframe>
+        <iframe name="pr-auc-tf-heatmap" src="165 Datasets/Transcription Factors/pr_auc_tf_heatmap.html"></iframe>
+
+    </div>
+
+
+    <!-- SOTA Iframes -->
+    <h2>SOTA Navigation</h2>
+    <div class="container" id="sota-nav">
+        <a href="165 Datasets/SOTA/Accuracy/accuracy_box_plot.html" target="accuracy-box-plot">Accuracy Box Plot</a>
+        <a href="165 Datasets/SOTA/ROC AUC/roc_auc_box_plot.html" target="roc-auc-box-plot">ROC AUC Box Plot</a>
+        <a href="165 Datasets/SOTA/PR AUC/pr_auc_box_plot.html" target="pr-auc-box-plot">PR AUC Box Plot</a>
+        <a href="165 Datasets/SOTA/Accuracy/accuracy_violin_plot.html" target="accuracy-violin-plot">Accuracy Violin Plot</a>
+        <a href="165 Datasets/SOTA/ROC AUC/roc_auc_violin_plot.html" target="roc-auc-violin-plot">ROC AUC Violin Plot</a>
+        <a href="165 Datasets/SOTA/PR AUC/pr_auc_violin_plot.html" target="pr-auc-violin-plot">PR AUC Violin Plot</a>
+    </div>
+    <div class="iframes-container" id="sota">
+        <iframe name="accuracy-box-plot" src="165 Datasets/SOTA/Accuracy/accuracy_box_plot.html"></iframe>
+        <iframe name="accuracy-violin-plot" src="165 Datasets/SOTA/Accuracy/accuracy_violin_plot.html"></iframe>
+        <iframe name="roc-auc-box-plot" src="165 Datasets/SOTA/ROC AUC/roc_auc_box_plot.html"></iframe>
+        <iframe name="roc-auc-violin-plot" src="165 Datasets/SOTA/ROC AUC/roc_auc_violin_plot.html"></iframe>
+        <iframe name="pr-auc-violin-plot" src="165 Datasets/SOTA/PR AUC/pr_auc_violin_plot.html"></iframe>
+        <iframe name="pr-auc-box-plot" src="165 Datasets/SOTA/PR AUC/pr_auc_box_plot.html"></iframe>
+    </div>
 </body>
 </html>
