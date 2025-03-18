@@ -1,10 +1,13 @@
 # GCBLANE: A Graph-Enhanced Convolutional BiLSTM Attention Network for Improved Transcription Factor Binding Site Prediction
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/gcblane-a-graph-enhanced-convolutional-bilstm/transcription-factor-binding-site-prediction-2)](https://paperswithcode.com/sota/transcription-factor-binding-site-prediction-2?p=gcblane-a-graph-enhanced-convolutional-bilstm)
+
 ### Authors
 
 - Jonas Chris Ferrao
 - Dickson Dias
 - Sweta Morajkar
+- Manisha Gokuldas Fal Dessai
 
 ## Overview
 
@@ -42,3 +45,20 @@ Evaluate the model's performance using the following metrics:
 The model is trained and evaluated on datasets from the Encyclopedia of DNA Elements (ENCODE) chromatin immunoprecipitation sequencing (ChIP-seq) experiments.
 
 Obtained from: https://csbioinformatics.njust.edu.cn/msdensenet/datasets.html
+
+## Citation
+
+If you use GCBLANE in your research, please cite the following paper:
+
+**GCBLANE: A Graph-Enhanced Convolutional BiLSTM Attention Network for Improved Transcription Factor Binding Site Prediction**  
+Jonas Chris Ferrao, Dickson Dias, Sweta Morajkar, Manisha Gokuldas Fal Dessai  
+[arXiv:2503.12377](https://doi.org/10.48550/arXiv.2503.12377)
+
+```bibtex
+@article{ferrao2025gcblane,
+  title={GCBLANE: A Graph-Enhanced Convolutional BiLSTM Attention Network for Improved Transcription Factor Binding Site Prediction},
+  author={Jonas Chris Ferrao and Dickson Dias and Sweta Morajkar and Manisha Gokuldas Fal Dessai},
+  journal={arXiv preprint arXiv:2503.12377},
+  year={2025}
+}
+```
